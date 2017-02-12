@@ -19,6 +19,8 @@ namespace APIs.Models
             context.Stores.Add(new stores { id=1, name="Buenavista", address="Calle 98 Cra 53"});
             context.Stores.Add(new stores { id = 2, name = "Portal del Prado", address = "Calle 46 Cra 53" });
             context.Stores.Add(new stores { id = 3, name = "Viva", address = "Calle 90 Cra 51B" });
+
+            context.SaveChanges();
             base.Seed(context);
         }
     }
