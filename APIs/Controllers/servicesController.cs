@@ -42,7 +42,7 @@ namespace APIs.Controllers
         {
             var _result = new List<stores>();
             _result.Add(new stores() { id = 1, address = "Direccion 1", name = "Tienda 1"});
-            return new storesViewModel() { sucess = true};
+            return new storesViewModel() { sucess = true, stores = _result};
         }
 
         // GET: Services/Articles/5

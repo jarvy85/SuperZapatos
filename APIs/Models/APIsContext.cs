@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -22,5 +23,19 @@ namespace APIs.Models
         public System.Data.Entity.DbSet<Modelos.articles> Articles { get; set; }
 
         public System.Data.Entity.DbSet<Modelos.stores> Stores { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            this.Configuration.LazyLoadingEnabled = false; //PAra cargar la entidaddes solo cuando se usan
+            this.Configuration.ProxyCreationEnabled = false;
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Entity<Modelos.articles>()
+                .HasRequired(fk => fk.stores)
+                .WithMany()
+                .HasForeignKey(x => x.store_id);
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
