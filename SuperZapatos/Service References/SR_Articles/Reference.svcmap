@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4540eb7f-1e62-43ab-9796-4768464c1800" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49773/ArticleService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ArticleService.xsd" MetadataType="Schema" ID="ffb80aef-addb-4042-a40e-0a18dfff6328" SourceId="1" SourceUrl="http://localhost:49773/ArticleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ArticleService.wsdl" MetadataType="Wsdl" ID="7324a345-df71-4f32-a29d-d976b2c0baa6" SourceId="1" SourceUrl="http://localhost:49773/ArticleService.svc?wsdl" />
+    <MetadataFile FileName="ArticleService1.xsd" MetadataType="Schema" ID="275d046c-32e5-49c2-891d-379b73a3ed9b" SourceId="1" SourceUrl="http://localhost:49773/ArticleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ArticleService2.xsd" MetadataType="Schema" ID="53c30970-83c6-4f69-b316-1d011f0203fb" SourceId="1" SourceUrl="http://localhost:49773/ArticleService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

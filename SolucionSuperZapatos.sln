@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperZapatos", "SuperZapatos\SuperZapatos.csproj", "{6521A037-D746-416E-B46E-26323ADDD49D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelos", "Modelos\Modelos.csproj", "{A8C12FEB-BEF3-49E0-A276-3C3836CFBE93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "APIs\API.csproj", "{DC2C6796-AB8B-4BBD-86D9-CACADC304E0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6521A037-D746-416E-B46E-26323ADDD49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6521A037-D746-416E-B46E-26323ADDD49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6521A037-D746-416E-B46E-26323ADDD49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6521A037-D746-416E-B46E-26323ADDD49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C12FEB-BEF3-49E0-A276-3C3836CFBE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C12FEB-BEF3-49E0-A276-3C3836CFBE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C12FEB-BEF3-49E0-A276-3C3836CFBE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C12FEB-BEF3-49E0-A276-3C3836CFBE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2C6796-AB8B-4BBD-86D9-CACADC304E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2C6796-AB8B-4BBD-86D9-CACADC304E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2C6796-AB8B-4BBD-86D9-CACADC304E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2C6796-AB8B-4BBD-86D9-CACADC304E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

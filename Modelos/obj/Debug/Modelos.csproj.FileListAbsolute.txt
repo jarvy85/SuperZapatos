@@ -1,0 +1,5 @@
+C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\bin\Debug\Modelos.dll
+C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\bin\Debug\Modelos.pdb
+C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\obj\Debug\Modelos.csprojResolveAssemblyReference.cache
+C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\obj\Debug\Modelos.dll
+C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\obj\Debug\Modelos.pdb
