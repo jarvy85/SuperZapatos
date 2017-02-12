@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    public class Stores
+    public class stores
     {
         public int id { get; set; }
         public string name { get; set; }

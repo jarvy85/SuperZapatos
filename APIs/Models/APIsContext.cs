@@ -19,8 +19,8 @@ namespace APIs.Models
         {
         }
 
-        public System.Data.Entity.DbSet<Modelos.Articles> Articles { get; set; }
+        public System.Data.Entity.DbSet<Modelos.articles> Articles { get; set; }
 
-        public System.Data.Entity.DbSet<Modelos.Stores> Stores { get; set; }
+        public System.Data.Entity.DbSet<Modelos.stores> Stores { get; set; }
     }
 }

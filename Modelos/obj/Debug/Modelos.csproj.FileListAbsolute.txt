@@ -3,3 +3,8 @@ C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelo
 C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\obj\Debug\Modelos.csprojResolveAssemblyReference.cache
 C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\obj\Debug\Modelos.dll
 C:\Users\jarvy\Documents\Visual Studio 2015\Projects\SolucionSuperZapatos\Modelos\obj\Debug\Modelos.pdb
+C:\Users\jarvy\Source\Repos\SuperZapatos\Modelos\bin\Debug\Modelos.dll
+C:\Users\jarvy\Source\Repos\SuperZapatos\Modelos\bin\Debug\Modelos.pdb
+C:\Users\jarvy\Source\Repos\SuperZapatos\Modelos\obj\Debug\Modelos.csprojResolveAssemblyReference.cache
+C:\Users\jarvy\Source\Repos\SuperZapatos\Modelos\obj\Debug\Modelos.dll
+C:\Users\jarvy\Source\Repos\SuperZapatos\Modelos\obj\Debug\Modelos.pdb

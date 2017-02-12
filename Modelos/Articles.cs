@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    public class Articles
+    public class articles
     {
         public int id { get; set; }
         public string name { get; set; }
@@ -16,6 +16,6 @@ namespace Modelos
         public double total_in_vault { get; set; }
         public int store_id { get; set; }
 
-        public virtual Stores stores { get; set; } //pilas que sea publica para poder accesar desde aca
+        public virtual stores stores { get; set; } //pilas que sea publica para poder accesar desde aca
     }
 }

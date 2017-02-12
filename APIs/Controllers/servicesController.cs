@@ -11,6 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using APIs.Models;
 using Modelos;
+using Modelos.ViewModel;
 
 namespace APIs.Controllers
 {
@@ -22,24 +23,33 @@ namespace APIs.Controllers
         [HttpGet]
         public Object articles()
         {
-            var _result = new List<Articles>();
-            _result.Add(new Articles() { id = 1, store_id = 1, description = "Descripcion", name = "Name" });
+            var _result = new List<articles>();
+            _result.Add(new articles() { id = 1, store_id = 1, description = "Descripcion", name = "Name" });
             return new { Articles = _result };
         }
         // GET: api/Stores
 
+        //[HttpGet]
+        //public Object stores()
+        //{
+        //    var _result = new List<stores>();
+        //    _result.Add(new stores() { id = 1, name = "Tienda 1", address = "Direccion 1" });
+        //    return new { Stores = _result };
+        //}
+
         [HttpGet]
         public Object stores()
         {
-            var _result = new List<Stores>();
-            _result.Add(new Stores() { id = 1, name = "Tienda 1", address = "Direccion 1" });
-            return new { Stores = _result };
+            var _result = new List<stores>();
+            _result.Add(new stores() { id = 1, address = "Direccion 1", name = "Tienda 1"});
+            return new storesViewModel() { sucess = true};
         }
+
         // GET: Services/Articles/5
-        [ResponseType(typeof(Articles))]
+        [ResponseType(typeof(articles))]
         public async Task<IHttpActionResult> GetArticles(int id)
         {
-            Articles articles = await db.Articles.FindAsync(id);
+            articles articles = await db.Articles.FindAsync(id);
             if (articles == null)
             {
                 return NotFound();
@@ -50,7 +60,7 @@ namespace APIs.Controllers
 
         // PUT: Services/Articles/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutArticles(int id, Articles articles)
+        public async Task<IHttpActionResult> PutArticles(int id, articles articles)
         {
             if (!ModelState.IsValid)
             {
@@ -84,8 +94,8 @@ namespace APIs.Controllers
         }
 
         // POST: Services/Articles
-        [ResponseType(typeof(Articles))]
-        public async Task<IHttpActionResult> PostArticles(Articles articles)
+        [ResponseType(typeof(articles))]
+        public async Task<IHttpActionResult> PostArticles(articles articles)
         {
             if (!ModelState.IsValid)
             {
@@ -99,10 +109,10 @@ namespace APIs.Controllers
         }
 
         // DELETE: Services/Articles/5
-        [ResponseType(typeof(Articles))]
+        [ResponseType(typeof(articles))]
         public async Task<IHttpActionResult> DeleteArticles(int id)
         {
-            Articles articles = await db.Articles.FindAsync(id);
+            articles articles = await db.Articles.FindAsync(id);
             if (articles == null)
             {
                 return NotFound();
