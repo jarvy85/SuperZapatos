@@ -26,6 +26,46 @@ namespace APIs.Controllers
             var _result = db.articles.Include(x => x.stores).ToList();
             return new articlesViewModel() { sucess = true, articles = _result };
         }
+        // GET: services/articles/{id}
+        [HttpGet]
+        public articles articles(int id)
+        {
+            var _result = db.articles.Find(id);
+            return _result;
+        }
+        // POST: services/articles/postarticle
+        [HttpPost]
+        [Route("services/articles/postarticle")]
+        public articles postarticle(articles _entidad)
+        {
+            var _result = db.articles.AsNoTracking().Any(x => x.id == _entidad.id);
+            // preguntar si es nula
+            db.articles.Attach(_entidad);
+            var entry = db.Entry(_entidad);
+            entry.State = EntityState.Modified;
+            db.SaveChanges();
+            return _entidad;
+        }
+        // PUT: services/articles/putarticle
+        [HttpPut]
+        [Route("services/articles/putarticle")]
+        public Object putarticle(articles _entidad)
+        {
+            var _result = db.articles.AsNoTracking().Any(x => x.id == _entidad.id);
+            // preguntar si existe y retornas error
+            if (_result)
+            {
+                db.articles.Add(_entidad);
+                db.SaveChanges();
+                return _entidad;
+            }
+            else
+            {
+                return new errorViewModel() { error_msg = "Record already exist ", error_code = 400, sucess = false };
+            }
+            
+        }
+
 
         // GET: /services/stores
         [HttpGet]
@@ -37,11 +77,11 @@ namespace APIs.Controllers
 
         // GET: /services/articles/stores/:id 
         [HttpGet]
-        [Route("services/article/store/{id}")]
-        public object article_by_store(string y)
+        [Route("services/articles/stores/{id_str}")]
+        public object article_by_store(string id_str)
         {
             int id;
-            if (!int.TryParse(y, out id))
+            if (!int.TryParse(id_str, out id))
             {
                 return new errorViewModel() { error_msg = "Bad Request", error_code =400, sucess = false };
             }
