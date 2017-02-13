@@ -95,12 +95,8 @@ namespace APIs.Controllers
                 else
                 {
                     return new errorViewModel() { error_msg = "Record not Found ", error_code = 404, sucess = false };
-                }
-                
-                
-            }
-            
-            
+                }               
+            }  
         }
 
         //[HttpGet]

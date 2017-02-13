@@ -28,7 +28,7 @@ namespace APIs.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            this.Configuration.LazyLoadingEnabled = false; //PAra cargar la entidaddes solo cuando se usan
+            this.Configuration.LazyLoadingEnabled = false; //PAra cargar la entidades solo cuando se usan
             this.Configuration.ProxyCreationEnabled = false;
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Modelos.articles>()
