@@ -21,19 +21,47 @@ namespace APIs.Controllers
 
         // GET: Services/Articles
         [HttpGet]
-        public Object articles()
+        public articlesViewModel articles()
         {
             var _result = db.articles.Include(x => x.stores).ToList();
             return new articlesViewModel() { sucess = true, articles = _result };
         }
 
+        // GET: /services/stores
         [HttpGet]
-        public Object stores()
+        public storesViewModel stores()
         {
             var _result = db.stores.ToList();
             return new storesViewModel() { sucess = true, stores = _result };
         }
-        // GET: api/Stores
+
+        // GET: /services/articles/stores/:id 
+        [HttpGet]
+        [Route("services/article/store/{id}")]
+        public object article_by_store(string y)
+        {
+            int id;
+            if (!int.TryParse(y, out id))
+            {
+                return new errorViewModel() { error_msg = "Bad Request", error_code =400, sucess = false };
+            }
+            else
+            {
+                var _result = db.articles.Include(x => x.stores).Where(x => x.store_id == id).ToList();
+                if (_result.Any(x => x.store_id == id))
+                {
+                    return new articlesViewModel() { sucess = true, articles = _result };
+                }
+                else
+                {
+                    return new errorViewModel() { error_msg = "Record not Found ", error_code = 404, sucess = false };
+                }
+                
+                
+            }
+            
+            
+        }
 
         //[HttpGet]
         //public Object stores()
