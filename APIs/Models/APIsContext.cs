@@ -18,11 +18,12 @@ namespace APIs.Models
     
         public APIsContext() : base("name=APIsContext")
         {
+            Database.SetInitializer(new APIs.Models.DatabaseInitializer());
         }
 
-        public System.Data.Entity.DbSet<Modelos.articles> Articles { get; set; }
+        public System.Data.Entity.DbSet<Modelos.articles> articles { get; set; }
 
-        public System.Data.Entity.DbSet<Modelos.stores> Stores { get; set; }
+        public System.Data.Entity.DbSet<Modelos.stores> stores { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -34,6 +35,7 @@ namespace APIs.Models
                 .HasRequired(fk => fk.stores)
                 .WithMany()
                 .HasForeignKey(x => x.store_id);
+            modelBuilder.Entity<Modelos.articles>();
 
             base.OnModelCreating(modelBuilder);
         }

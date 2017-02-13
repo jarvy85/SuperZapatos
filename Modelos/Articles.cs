@@ -15,6 +15,12 @@ namespace Modelos
         public double total_in_shelf { get; set; }
         public double total_in_vault { get; set; }
         public int store_id { get; set; }
+        public string store_name { 
+            get 
+            {
+                return stores?.name ?? "";
+            } 
+        }
 
         public virtual stores stores { get; set; } //pilas que sea publica para poder accesar desde aca
     }
