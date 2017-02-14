@@ -9,7 +9,7 @@ namespace SuperZapatos.Client
     public class ApiClient
     {
 
-        string APIUri = "http://localhost:57240/";
+        string APIUri = "http://localhost:50249/";
 
         public T ExecuteGet<T>(params string[] _params)
         {
